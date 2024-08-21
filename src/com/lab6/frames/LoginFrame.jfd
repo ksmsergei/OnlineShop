@@ -1,0 +1,67 @@
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq t {space :p:50:p, par t {comp tfLogin::t::228:x, comp pfPassword::l:::x, comp lblAuth::l:::x, seq t {space :0:97:x, comp cbShowPassword:::p::p}, seq l {par l {comp lblLogin:::p::p, comp lblPassword::l:p::p}, space :0:186:x}, comp btnAuth::t::228:x, comp lblRegister::t::228:x}, space :p:50:p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp lblAuth:::p::p, space s:::p, comp lblLogin:::p::p, space :::p, comp tfLogin:::p::p, space u:::p, comp lblPassword:::p::p, space :::p, comp pfPassword:::p::p, space :::p, comp cbShowPassword:::p::p, space :p:40:p, comp btnAuth:::p::p, space :p:45:p, comp lblRegister:::::p, space :::x}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 3
+			"resizable": false
+			"title": "Авторизация"
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/res/icon.png" )
+			addEvent( new FormEvent( "java.awt.event.ComponentListener", "componentShown", "thisComponentShown", true ) )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lblAuth"
+				"text": "Авторизация"
+				"font": new java.awt.Font( "Segoe UI", 0, 24 )
+				"horizontalAlignment": 0
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lblLogin"
+				"text": "Логин"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "tfLogin"
+				auxiliary() {
+					"JavaCodeGenerator.customCreate": true
+				}
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lblPassword"
+				"text": "Пароль"
+			} )
+			add( new FormComponent( "javax.swing.JPasswordField" ) {
+				name: "pfPassword"
+				auxiliary() {
+					"JavaCodeGenerator.customCreate": true
+				}
+			} )
+			add( new FormComponent( "javax.swing.JCheckBox" ) {
+				name: "cbShowPassword"
+				"text": "Показывать пароль"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cbShowPassword", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnAuth"
+				"text": "Войти"
+				"enabled": false
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnAuth", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lblRegister"
+				"text": "Зарегистрируйтесь сейчас"
+				"horizontalAlignment": 0
+				"foreground": new java.awt.Color( 94, 135, 200, 255 )
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseEntered", "lblRegisterMouseEntered", true ) )
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseExited", "lblRegisterMouseExited", true ) )
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseReleased", "lblRegisterMouseReleased", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 330, 375 )
+			"location": new java.awt.Point( 0, 0 )
+		} )
+	}
+}

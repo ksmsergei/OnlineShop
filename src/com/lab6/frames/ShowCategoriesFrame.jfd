@@ -1,0 +1,76 @@
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp lblCategories:::::x, seq l {comp btnAdminCreate:::p:36:p, space ::200:x, comp btnGoBack:::p:36:p, space :::p, comp btnSearch:::p:36:p, space :::p, comp btnEnter:::p:36:p}}, space :::p}, comp spCategories::l::368:x}"
+			"$verticalGroup": "par l {seq l {space :::p, comp lblCategories:::p::p, space :::p, comp spCategories::::273:x, space :::x, par l {comp btnEnter:::p::p, comp btnAdminCreate:::p::p, comp btnSearch:::p::p, comp btnGoBack::l:p::p}, space :::x}}"
+		} ) {
+			name: "this"
+			"title": "Выберите категорию"
+			"defaultCloseOperation": 3
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/res/icon.png" )
+			"resizable": false
+			"minimumSize": new java.awt.Dimension( 370, 39 )
+			addEvent( new FormEvent( "java.awt.event.ComponentListener", "componentShown", "thisComponentShown", true ) )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lblCategories"
+				"text": "Выберите категорию"
+				"font": new java.awt.Font( "Segoe UI", 0, 24 )
+				"horizontalAlignment": 0
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "spCategories"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "tbCategories"
+					"selectionMode": 0
+					"componentPopupMenu": new FormReference( "pmCategories" )
+					auxiliary() {
+						"JavaCodeGenerator.customCreate": true
+					}
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "tbCategoriesMouseClicked", true ) )
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "tbCategoriesKeyReleased", true ) )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "tbCategoriesMousePressed", true ) )
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnGoBack"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/res/goBack.png" )
+				"toolTipText": "Назад"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnGoBack", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnEnter"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/res/enter.png" )
+				"toolTipText": "Войти"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnEnter", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnAdminCreate"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/res/create.png" )
+				"toolTipText": "(Админ) Создать категорию"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnAdminCreate", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnSearch"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/res/search.png" )
+				"toolTipText": "Поиск"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnSearch", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 370, 390 )
+			"location": new java.awt.Point( 0, 0 )
+		} )
+		add( new FormContainer( "javax.swing.JPopupMenu", new FormLayoutManager( class javax.swing.JPopupMenu ) ) {
+			name: "pmCategories"
+			add( new FormComponent( "javax.swing.JMenuItem" ) {
+				name: "miEnter"
+				"text": "Войти"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnEnter", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 375, 5 )
+		} )
+	}
+}

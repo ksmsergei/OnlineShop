@@ -1,0 +1,79 @@
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq t {space :::p, par t {comp lblWelcome:::::x, comp pnlButtons:::::x}, space :::p}}"
+			"$verticalGroup": "par l {seq {space :::p, comp lblWelcome:::p::p, space s:::p, comp pnlButtons::::375:x, space :::p}}"
+		} ) {
+			name: "this"
+			"title": "Главное меню"
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/res/icon.png" )
+			"defaultCloseOperation": 3
+			"resizable": false
+			addEvent( new FormEvent( "java.awt.event.ComponentListener", "componentShown", "thisComponentShown", true ) )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lblWelcome"
+				"text": "Добро пожаловать, _!"
+				"font": new java.awt.Font( "Segoe UI", 1, 24 )
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/res/icon.png" )
+				"iconTextGap": 15
+				"minimumSize": new java.awt.Dimension( 486, 64 )
+				"preferredSize": new java.awt.Dimension( 486, 64 )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+				"columns": 2
+				"hgap": 10
+				"rows": 2
+				"vgap": 10
+			} ) {
+				name: "pnlButtons"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "btnCategories"
+					"text": "Просмотреть категории"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/res/category.png" )
+					"horizontalTextPosition": 0
+					"verticalTextPosition": 3
+					"preferredSize": new java.awt.Dimension( 137, 50 )
+					"font": &Font0 new java.awt.Font( "Segoe UI", 0, 16 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnCategories", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "btnProducts"
+					"text": "Выбрать продукты"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/res/product.png" )
+					"horizontalTextPosition": 0
+					"verticalTextPosition": 3
+					"preferredSize": new java.awt.Dimension( 137, 50 )
+					"font": #Font0
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnProducts", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "btnBasket"
+					"text": "Корзина"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/res/basket.png" )
+					"horizontalTextPosition": 0
+					"verticalTextPosition": 3
+					"iconTextGap": -2
+					"font": #Font0
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnBasket", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "btnLogout"
+					"text": "Выйти"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/res/logout.png" )
+					"horizontalTextPosition": 0
+					"verticalTextPosition": 3
+					"iconTextGap": -2
+					"font": #Font0
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnLogout", true ) )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 500, 500 )
+		} )
+	}
+}
+

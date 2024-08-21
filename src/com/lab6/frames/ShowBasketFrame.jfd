@@ -1,0 +1,67 @@
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp lblBasket:::::x, seq l {comp lblTotalCost::::188:x, space :::p, comp btnGoBack:::p:36:p, space :::p, comp btnFilter:::p:36:p, space :::p, comp btnCheckout:::p:36:p, space :p::p, comp btnRemove:::p:36:p}}, space :::p}, comp spProducts::l::368:x}"
+			"$verticalGroup": "par l {seq l {space :::p, comp lblBasket:::p::p, space :::p, comp spProducts::::274:x, space :::p, par l {seq {space :0:2:x, par l {comp btnCheckout::l:p::p, comp btnRemove::l:p::p, comp btnFilter::l:p::p, comp btnGoBack::l:p::p}}, comp lblTotalCost::l:::x}, space :0:3:x}}"
+		} ) {
+			name: "this"
+			"title": "Ваша корзина"
+			"defaultCloseOperation": 3
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/res/icon.png" )
+			"resizable": false
+			"minimumSize": new java.awt.Dimension( 370, 39 )
+			addEvent( new FormEvent( "java.awt.event.ComponentListener", "componentShown", "thisComponentShown", true ) )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lblBasket"
+				"text": "Ваша корзина"
+				"font": new java.awt.Font( "Segoe UI", 0, 24 )
+				"horizontalAlignment": 0
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "spProducts"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "tbProducts"
+					"selectionMode": 0
+					auxiliary() {
+						"JavaCodeGenerator.customCreate": true
+					}
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnRemove"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/res/remove.png" )
+				"toolTipText": "Удалить товар"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnRemove", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lblTotalCost"
+				"text": "Итого: _₸"
+				"font": new java.awt.Font( "Segoe UI", 0, 18 )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnCheckout"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/res/checkout.png" )
+				"toolTipText": "Оформить заказ"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnCheckout", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnGoBack"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/res/goBack.png" )
+				"toolTipText": "Назад"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnGoBack", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnFilter"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/res/filter.png" )
+				"toolTipText": "Фильтрация"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnFilter", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 370, 390 )
+		} )
+	}
+}

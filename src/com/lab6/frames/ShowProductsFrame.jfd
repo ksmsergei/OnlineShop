@@ -1,0 +1,89 @@
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp lblProducts:::::x, seq l {comp btnAdminCreate:::p:36:p, space :::p, comp btnAdminInsert:::p:36:p, space ::116:x, comp btnGoBack:::p:36:p, space :::p, comp btnSearch:::p:36:p, space :::p, comp btnFilter:::p:36:p, space :::p, comp btnAddProduct:::p:36:p}}, space :::p}, comp spProducts::l::368:x}"
+			"$verticalGroup": "par l {seq l {space :::p, comp lblProducts:::p::p, space :::p, comp spProducts::::267:x, space :::x, par l {comp btnAddProduct::l:p::p, comp btnFilter::l:p::p, comp btnAdminCreate:::p::p, comp btnAdminInsert::l:p::p, comp btnSearch:::p::p, comp btnGoBack::l:p::p}, space :::x}}"
+		} ) {
+			name: "this"
+			"title": "Выберите продукты"
+			"defaultCloseOperation": 3
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/res/icon.png" )
+			"minimumSize": new java.awt.Dimension( 370, 39 )
+			"resizable": false
+			addEvent( new FormEvent( "java.awt.event.ComponentListener", "componentShown", "thisComponentShown", true ) )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lblProducts"
+				"text": "Выберите продукты"
+				"font": new java.awt.Font( "Segoe UI", 0, 24 )
+				"horizontalAlignment": 0
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "spProducts"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "tbProducts"
+					"selectionMode": 0
+					"componentPopupMenu": new FormReference( "pmProducts" )
+					auxiliary() {
+						"JavaCodeGenerator.customCreate": true
+					}
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "tbProductsMouseClicked", true ) )
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "tbProductsKeyReleased", true ) )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "tbProductsMousePressed", true ) )
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnGoBack"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/res/goBack.png" )
+				"toolTipText": "Назад"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnGoBack", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnFilter"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/res/filter.png" )
+				"toolTipText": "Фильтрация"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnFilter", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnAddProduct"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/res/add.png" )
+				"toolTipText": "Добавить в корзину"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnAddProduct", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnAdminCreate"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/res/create.png" )
+				"toolTipText": "(Админ) Создать товар"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnAdminCreate", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnAdminInsert"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/res/insert.png" )
+				"toolTipText": "(Админ) Добавить товар в текущую категорию"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnAdminInsert", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnSearch"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/res/search.png" )
+				"toolTipText": "Назад"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnSearch", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 370, 390 )
+			"location": new java.awt.Point( 0, 0 )
+		} )
+		add( new FormContainer( "javax.swing.JPopupMenu", new FormLayoutManager( class javax.swing.JPopupMenu ) ) {
+			name: "pmProducts"
+			add( new FormComponent( "javax.swing.JMenuItem" ) {
+				name: "miAddProduct"
+				"text": "Добавить в корзину"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnAddProduct", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 375, 5 )
+			"size": new java.awt.Dimension( 135, 25 )
+		} )
+	}
+}
