@@ -21,4 +21,4 @@ Some screenshots
 
 GUI
 ---
-GUI was created in Java Swing. [JFormDesigner](https://www.formdev.com) was used to create forms.
+GUI was created in Java Swing. [JFormDesigner](https://www.formdev.com) was used to create forms. Icons from [icons8](https://icons8.com).
